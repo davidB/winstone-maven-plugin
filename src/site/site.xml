@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <bannerLeft>
+    <name>Winstone Maven Plugin (1.0)</name>
+    <href>http://alchim.sf.net/winstone-maven-plugin</href>
+  </bannerLeft>
+  <publishDate position="left" format="yyyy-MM-dd HH:mm" />
+  <!--
+    <head>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    _uacct = "UA-140879-1";
+    urchinTracker();
+    </script>
+    </head>
+  -->
+  <poweredBy>
+    <logo name="Hosted on SourceForge.net" href="http://sourceforge.net" img="http://sflogo.sourceforge.net/sflogo.php?group_id=65041&amp;type=2" />
+    <logo name="Build with Maven 2" href="http://maven.apache.org" img="images/logos/maven-feather.png" />
+    <logo name="CC-GNU LGPL" href="http://creativecommons.org/licenses/LGPL/2.1/" img="http://creativecommons.org/images/public/cc-LGPL-a.png" />
+  </poweredBy>
+
+  <body>
+    <links>
+      <item name="download" href="../download" />
+      <item name="sourceforge" href="http://sf.net/projects/alchim" />
+      <item name="winstone" href="http://winstone.sourceforge.net/"/>
+      <item name="maven 2" href="http://maven.apache.org/maven2/" />
+    </links>
+
+    <menu name="Overview">
+      <item name="Introduction" href="overview.html" />
+      <item name="Goals" href="plugin-info.html" />
+      <item name="Usage" href="usage.html" />
+      <!-- item name="FAQ" href="faq.html" /-->
+    </menu>
+<!--
+    <menu name="Examples">
+      <item name="description1" href="examples/example-one.html" />
+      <item name="description2" href="examples/example-two.html" />
+    </menu>
+ -->
+    <menu ref="reports" />
+  </body>
+</project>

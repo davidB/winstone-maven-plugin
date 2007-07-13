@@ -1,0 +1,17 @@
+<document>
+<properties>
+  <author email="dwayneb@users.sourceforge.net">David Bernard</author>
+  </properties>
+  <meta name="keyword" content="winstone, mojo"/>
+ <body>
+<section name="Overview">
+
+ <p>Embed your warfile into/with the winstone JAR itself. This allows an all-in-one
+ container plus web-application JAR file to be downloaded, and then unpacked
+ at execution time.</p>
+
+ <p>see : <a href="http://winstone.sourceforge.net/#embedding">http://winstone.sourceforge.net/#embedding</a></p>
+
+</section>
+</body>
+</document>

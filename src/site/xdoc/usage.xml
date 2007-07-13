@@ -1,0 +1,129 @@
+<document>
+<properties>
+  <author email="dwayneb@users.sourceforge.net">David Bernard</author>
+  </properties>
+  <meta name="keyword" content="java, spoon, spoonlet, maven"/>
+ <body>
+ <section name="Usage">
+ The plugin need a project that generate a war file to run.
+ <source><![CDATA[
+<project>
+...
+  <package>war</package>
+...
+</project>
+]]></source>
+
+ <subsection name="Without pom.xml change">
+ <source><![CDATA[
+ $> mvn net.sf.alchim:winstone-maven-plugin:embed
+ $> java -jar target/myArtifact-myVersion-standalone.jar
+ ]]></source>
+ </subsection>
+ <subsection name="With pom.xml change">
+<p>To Generate with the default winstone (0.9.6), without override default commande line options, with default name (finalName-standalone.jar) :
+<source><![CDATA[
+<project>
+...
+  <build>
+    <plugins>
+...
+      <plugin>
+        <groupId>net.sf.alchim</groupId>
+        <artifactId>winstone-maven-plugin</artifactId>
+      </plugin>
+...
+    </plugins>
+  </build>
+...
+</project>
+ ]]></source>
+</p>
+
+<p>To use an other version of winstone (the artifact must present in a repository (default, or project defined), declare your winstone version as dependency :
+<source><![CDATA[
+<project>
+...
+  <build>
+    <plugins>
+...
+      <plugin>
+        <groupId>net.sf.alchim</groupId>
+        <artifactId>winstone-maven-plugin</artifactId>
+        <dependencies>
+          <dependency>
+            <groupId>net.sourceforge.winstone</groupId>
+            <artifactId>winstone</artifactId>
+            <version>0.9.9</version>
+          </dependency>
+        </dependencies>
+        </configuration>
+      </plugin>
+...
+    </plugins>
+  </build>
+...
+</project>
+ ]]></source>
+ </p>
+
+<p>To override default <a href="http://winstone.sourceforge.net/#commandLine">command line options</a>, define options as property of cmdLineOptions:
+<source><![CDATA[
+<project>
+...
+  <build>
+    <plugins>
+...
+      <plugin>
+        <groupId>net.sf.alchim</groupId>
+        <artifactId>winstone-maven-plugin</artifactId>
+        <configuration>
+          <cmdLineOptions>
+            <property>
+              <name>ajp13Port</name>
+              <value>-1</value>
+            </property>
+          </cmdLineOptions>
+        </configuration>
+      </plugin>
+...
+    </plugins>
+  </build>
+...
+</project>
+ ]]></source>
+ </p>
+
+<p>For other configuration (change the output name, war file,...) see <a href="embed-mojo.html">the "embed" goal</a></p>
+</subsection>
+
+<subsection name="attach to package phase">
+<source><![CDATA[
+<project>
+...
+  <build>
+    <plugins>
+...
+      <plugin>
+        <groupId>net.sf.alchim</groupId>
+        <artifactId>winstone-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>embed</goal>
+            </goals>
+          </execution>
+        </executions>
+        ...
+      </plugin>
+...
+    </plugins>
+  </build>
+...
+</project>
+ ]]></source>
+</subsection>
+</section>
+</body>
+</document>

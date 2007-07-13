@@ -1,0 +1,30 @@
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+
+# eclipse conf file
+.settings
+.classpath
+.project
+
+# building
+target
+build
+null
+tmp
+dist
+test-output
+
+# other scm
+.svn
+.CVS
+.git
+
+# switch to regexp syntax.
+#  syntax: regexp
+#  ^\.pc/
+
+
