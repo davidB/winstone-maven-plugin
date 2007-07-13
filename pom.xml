@@ -54,21 +54,11 @@
     <plugins>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.2-beta-1</version>
         <configuration>
-          <descriptorRefs>
-            <descriptorRef>project</descriptorRef>
-          </descriptorRefs>
+          <descriptors>
+            <descriptor>src/assembly/project.xml</descriptor>
+          </descriptors>
         </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id><!-- this is used for inheritance merges -->
-            <phase>package</phase><!-- append to the packaging phase. -->
-            <goals>
-              <goal>attached</goal><!-- goals == mojos -->
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
