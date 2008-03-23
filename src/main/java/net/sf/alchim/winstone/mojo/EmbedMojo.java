@@ -112,6 +112,10 @@ public class EmbedMojo extends AbstractMojo {
     protected List remoteRepositories;
 
     public void execute() throws MojoExecutionException {
+        if ("war".equals(project.getPackaging())) {
+            getLog().info("work only for packaging == 'war'");
+            return;
+        }
         try {
             File f = outputDirectory;
             if (!f.exists()) {
