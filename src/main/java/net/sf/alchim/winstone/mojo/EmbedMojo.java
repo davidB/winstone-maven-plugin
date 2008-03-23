@@ -143,7 +143,7 @@ public class EmbedMojo extends AbstractMojo {
             }
         }
         if (back == null) {
-            Artifact artifact = factory.createArtifactWithClassifier("net.sourceforge.winstone", "winstone", "0.9.6", "jar", "");
+            Artifact artifact = factory.createArtifactWithClassifier("net.sourceforge.winstone", "winstone", "0.9.10", "jar", "");
             back = selectWinstoneJar(artifact);
         }
         if (back == null) {
