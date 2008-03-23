@@ -21,7 +21,7 @@
  ]]></source>
  </subsection>
  <subsection name="With pom.xml change">
-<p>To Generate with the default winstone (0.9.6), without override default commande line options, with default name (finalName-standalone.jar) :
+<p>To Generate with the default winstone (0.9.10), without override default commande line options, with default name (finalName-standalone.jar) :
 <source><![CDATA[
 <project>
 ...
@@ -57,7 +57,6 @@
             <version>0.9.9</version>
           </dependency>
         </dependencies>
-        </configuration>
       </plugin>
 ...
     </plugins>
