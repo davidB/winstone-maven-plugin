@@ -5,7 +5,7 @@
   <groupId>net.sf.alchim</groupId>
   <artifactId>winstone-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.1</version>
+  <version>1.2</version>
   <name>winstone-maven-plugin Maven Mojo</name>
   <url>http://alchim.sf.net/${artifactId}</url>
   <description>
